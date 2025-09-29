@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Resume</title>
+  <style>
+    /* Basic Reset and Variables */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --primary-color: #3498db;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
+      --border-radius: 6px;
+      --spacing: 1rem;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header, footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: var(--spacing);
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: var(--spacing);
+      justify-content: center;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a:hover,
+    header nav a:focus {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: var(--spacing) auto;
+      padding: var(--spacing);
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: var(--spacing);
+    }
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+    figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #666;
+    }
+    object {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+    }
+    @media (max-width: 600px) {
+      object {
+        height: 400px;
+      }
+      header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Resume</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>My Resume</h1>
+    <section aria-labelledby="resume-embed">
+      <figure role="figure" aria-describedby="resume-caption">
+        <object 
+          data="GitHubResume\Ordaz.Resume.pdf" 
+          type="application/pdf" 
+          aria-label="Embedded PDF of my resume"
+          tabindex="0"
+        >
+          <p>Your browser does not support inline PDF viewing. 
+            <a href="assets/my_resume.pdf" download>Download my resume here</a>.
+          </p>
+        </object>
+        <figcaption id="resume-caption">Embedded PDF resume (scroll to view)</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p style="text-align:center;">&copy; 2023 Your Name</p>
+  </footer>
+</body>
+</html>
