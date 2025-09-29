@@ -60,6 +60,14 @@
       text-align: center;
       margin-bottom: var(--spacing);
     }
+    /* Profile image style */
+    .profile-image {
+      width: 150px;
+      height: auto;
+      border: 2px solid var(--primary-color);
+      margin-bottom: var(--spacing);
+      display: block; /* block so it sits on its own line */
+    }
     figure {
       margin: 0;
       text-align: center;
@@ -90,25 +98,30 @@
   <header>
     <nav aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Resume</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="main.html" aria-current="page">Resume</a></li>
+        <li><a href="project1.html">Project1</a></li>
+        <li><a href="project2.html">Project2</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <h1>My Resume</h1>
+    <img 
+      src="GitHubResume\profile.JPG" 
+      class="profile-image" 
+      loading="lazy"
+    />
     <section aria-labelledby="resume-embed">
       <figure role="figure" aria-describedby="resume-caption">
         <object 
-          data="GitHubResume\Ordaz.Resume.pdf" 
+          data="Ordaz.Resume.pdf" 
           type="application/pdf" 
           aria-label="Embedded PDF of my resume"
           tabindex="0"
         >
           <p>Your browser does not support inline PDF viewing. 
-            <a href="assets/my_resume.pdf" download>Download my resume here</a>.
+            <a href="Ordaz.Resume.pdf" download>Download my resume here</a>.
           </p>
         </object>
         <figcaption id="resume-caption">Embedded PDF resume (scroll to view)</figcaption>
