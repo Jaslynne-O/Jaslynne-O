@@ -61,18 +61,7 @@
       margin-bottom: var(--spacing);
     }
     /* Profile image style */
-    .profile-image {
-      width: auto;
-      height: auto;
-      border: 2px solid var(--primary-color);
-      margin-bottom: var(--spacing);
-      display: block; /* block so it sits on its own line */
-    }
-    figure {
-      margin: 0;
-      text-align: center;
-    }
-    figcaption {
+        figcaption {
       margin-top: 0.5rem;
       font-style: italic;
       color: #666;
@@ -84,6 +73,15 @@
       border-radius: var(--border-radius);
     }
     @media (max-width: 600px) {
+      .profile-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-figure img {
+        width: 120px;
+        height: 120px;
+      }
       object {
         height: 400px;
       }
@@ -134,4 +132,3 @@
   </footer>
 </body>
 </html>
-
