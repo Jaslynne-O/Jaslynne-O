@@ -48,8 +48,8 @@
       text-decoration: underline;
     }
     main {
+      max-width: 1400px;
       flex: 1;
-      max-width: 900px;
       margin: var(--spacing) auto;
       padding: var(--spacing);
       background: white;
@@ -68,7 +68,7 @@
     }
     object {
       width: 100%;
-      height: 700px;
+      height: 500px;
       border: 1px solid #ccc;
       border-radius: var(--border-radius);
     }
@@ -83,6 +83,7 @@
         height: 120px;
       }
       object {
+        width: 100%;
         height: 400px;
       }
       header nav ul {
@@ -96,7 +97,7 @@
   <header>
     <nav aria-label="Primary navigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Resume</a></li>
+        <li><a href="main.html" aria-current="page">Resume</a></li>
         <li><a href="project1.html">Project1</a></li>
         <li><a href="project2.html">Project2</a></li>
       </ul>
@@ -106,15 +107,14 @@
   <main>
     <h1>My Resume</h1>
     <img 
-      src="assets\profile.jpg" 
-      alt='Profile photo"
+      src="assets/profile.jpg" 
       class="profile-image" 
       loading="lazy"
     />
     <section aria-labelledby="resume-embed">
       <figure role="figure" aria-describedby="resume-caption">
         <object 
-          data="assets\Ordaz.Resume.pdf" 
+          data="Ordaz.Resume.pdf" 
           type="application/pdf" 
           aria-label="Embedded PDF of my resume"
           tabindex="0"
@@ -123,12 +123,9 @@
             <a href="Ordaz.Resume.pdf" download>Download my resume here</a>.
           </p>
         </object>
-        <figcaption id="resume-caption">Embedded PDF resume (scroll to view)</figcaption>
       </figure>
     </section>
   </main>
+
 </body>
 </html>
-
-
-
