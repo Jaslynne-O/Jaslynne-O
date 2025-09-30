@@ -4,128 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Resume</title>
-  <style>
-    /* Basic Reset and Variables */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    :root {
-      --primary-color: #3498db;
-      --text-color: #333;
-      --bg-color: #f9f9f9;
-      --border-radius: 6px;
-      --spacing: 1rem;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header, footer {
-      background-color: var(--primary-color);
-      color: white;
-      padding: var(--spacing);
-    }
-    header nav ul {
-      list-style: none;
-      display: flex;
-      gap: var(--spacing);
-      justify-content: center;
-    }
-    header nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    header nav a:hover,
-    header nav a:focus {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 1400px;
-      flex: 1;
-      margin: var(--spacing) auto;
-      padding: var(--spacing);
-      background: white;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: var(--spacing);
-    }
-    /* Profile image style */
-        figcaption {
-      margin-top: 0.5rem;
-      font-style: italic;
-      color: #666;
-    }
-    object {
-      width: 100%;
-      height: 500px;
-      border: 1px solid #ccc;
-      border-radius: var(--border-radius);
-    }
-    @media (max-width: 600px) {
-      .profile-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .profile-figure img {
-        width: 120px;
-        height: 120px;
-      }
-      object {
-        width: 100%;
-        height: 400px;
-      }
-      header nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="main.html" aria-current="page">Resume</a></li>
-        <li><a href="project1.html">Project1</a></li>
-        <li><a href="project2.html">Project2</a></li>
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Resume</a></li>
+        <li><a href="project1.html">Project 1</a></li>
+        <li><a href="project2.html">Project 2</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>My Resume</h1>
-    <img 
-      src="assets/profile.jpg" 
-      class="profile-image" 
-      loading="lazy"
-    />
-    <section aria-labelledby="resume-embed">
-      <figure role="figure" aria-describedby="resume-caption">
-        <object 
-          data="Ordaz.Resume.pdf" 
-          type="application/pdf" 
-          aria-label="Embedded PDF of my resume"
-          tabindex="0"
-        >
-          <p>Your browser does not support inline PDF viewing. 
-            <a href="Ordaz.Resume.pdf" download>Download my resume here</a>.
+    <article class="resume-container" role="main" aria-label="Student Resume">
+      <header class="resume-header">
+        <img src="assets/profile.jpg" alt="Professional photo of [Your Full Name]" class="profile-pic" />
+        <div class="contact-info">
+          <h1>[Jaslynne Ordaz]</h1>
+          <p>
+            <a href="ja242753@ucf.edu">ja242753@ucf.edu</a><br />
+            <a href="www.linkedin.com/in/jaslynne-ordaz-0ba80926a" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
           </p>
-        </object>
-      </figure>
-    </section>
+        </div>
+      </header>
+
+      <section aria-labelledby="objective-heading" class="objective">
+        <h2 id="objective-heading">Professional Objective</h2>
+        <p>Seeking a challenging internship in software development where I can apply my programming skills and contribute to innovative projects while gaining valuable industry experience.</p>
+      </section>
+
+      <section aria-labelledby="education-heading" class="education">
+        <h2 id="education-heading">Education</h2>
+        <div class="item">
+          <h3>University of Central Florida (UCF)</h3>
+          <p class="subheading">Bachelor of Science in Information Technology</p>
+          <p class="date">Expected Graduation: May 2026</p>
+          <h3>Valencia College</h3>
+          <p class="subheading">Associactes in Arts</p>
+          <p class="date">August 2019 - December 2021</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="work-heading" class="work-experience">
+        <h2 id="work-heading">Relevant Work Experience</h2>
+        <div class="item">
+          <h3>Imagination Theatre Etc Crew</h3>
+          <p class="subheading">Orlando, FL</p>
+          <p class="date">October 2021 – Current</p>
+          <ul>
+            <li>Entering, updating, and verifying data into a computer system/database.</li>
+            <li>Operated photo equipment and editing software to capture, edit, and enhance images, meeting customers’ expectations for quality and consistency.</li>
+            <li>Consistently achieved sales targets by promoting packages, add-ons, and exclusive offers, contributing to overall revenue growth.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="projects-heading" class="projects">
+        <h2 id="projects-heading">Projects</h2>
+        <ul>
+          <li><a href="project1.html">Web-based Interaction game</a></li>
+          <li><a href="project2.html">A C Program</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="skills-heading" class="skills">
+        <h2 id="skills-heading">Skills</h2>
+        <ul class="skills-list" role="list">
+          <li class="skill" role="listitem">Fluent English/Spanish</li>
+          <li class="skill" role="listitem">SQL</li>
+          <li class="skill" role="listitem">HTML5 &amp; CSS3</li>
+          <li class="skill" role="listitem">Git &amp; GitHub</li>
+          <li class="skill" role="listitem">Problem Solving</li>
+        </ul>
+        <h2 id="Soft Applications">Soft Applications</h2>
+        <ul class="skills-list" role="list">
+          <li class="skill" role="listitem">MySQL server 8.0.30</li>
+          <li class="skill" role="listitem">Microsoft Office</li>
+          <li class="skill" role="listitem">Eclipse</li>
+          <li class="skill" role="listitem">Visual Code Studio</li>
+          <li class="skill" role="listitem">MySQL workbench 8</li>
+          <li class="skill" role="listitem">WireShark 4.2.2</li>
+        </ul>
+      </section>
+    </article>
   </main>
 
+  <footer>
+    <p>&copy; 2025 [Jaslynne Ordaz]. All rights reserved.</p>
+  </footer>
 </body>
 </html>
